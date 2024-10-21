@@ -1,17 +1,18 @@
 public class Magazine extends PrintedWork {
-    private String author;
-    private int numOfPages;
+    private final double price;
 
-    public Magazine(String Author, int NumOfPages) {
-        super(Author, 123);
+    public Magazine(String Author, int NumOfPages, double Price) {
+        super(Author, NumOfPages);
+        price = Price;
     }
 
     public Magazine() {
         super();
+        price = 0;
     }
 
     @Override
     public String Show() {
-        return "Magazine - Author: " + author + " | number of pages: " + numOfPages; 
+        return "Magazine --- Price: " + price + " | " + super.Show(); 
     }
 }

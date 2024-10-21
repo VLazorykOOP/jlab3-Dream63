@@ -1,17 +1,18 @@
 public class Book extends PrintedWork {
-    private String author;
-    private int numOfPages;
+    private final String genre;
 
-    public Book(String Author, int NumOfPages) {
-        super(Author, 123);
+    public Book(String Author, int NumOfPages, String Genre) {
+        super(Author, NumOfPages);
+        genre = Genre;
     }
 
     public Book() {
         super();
+        genre = "unknowm";
     }
 
     @Override
     public String Show() {
-        return "Book - Author: " + author + " | number of pages: " + numOfPages; 
+        return "Book --- Genre: " + genre + " | " + super.Show(); 
     }
 }

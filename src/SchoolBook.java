@@ -1,17 +1,18 @@
 public class SchoolBook extends PrintedWork {
-    private String author;
-    private int numOfPages;
+    private final String lesson;
 
-    public SchoolBook(String Author, int NumOfPages) {
-        super(Author, 123);
+    public SchoolBook(String Author, int NumOfPages, String Lesson) {
+        super(Author, NumOfPages);
+        lesson = Lesson;
     }
 
     public SchoolBook() {
         super();
+        lesson = "unknown";
     }
 
     @Override
     public String Show() {
-        return "SchoolBook - Author: " + author + " | number of pages: " + numOfPages; 
+        return "SchoolBook --- Lesson: " + lesson + " | " + super.Show(); 
     }
 }

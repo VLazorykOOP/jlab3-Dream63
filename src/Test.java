@@ -4,9 +4,9 @@ public class Test {
         PrintedWork[] works = new PrintedWork[4];
 
         works[0] = new PrintedWork("Shevchenko", 400);
-        works[1] = new Book("Franko", 150);
+        works[1] = new Book("Franko", 150, "Fantasy");
         works[2] = new Magazine();
-        works[3] = new SchoolBook("Avramenko", 250);
+        works[3] = new SchoolBook("Avramenko", 250, "Ukrainian Language");
 
         for (PrintedWork work : works) {
             System.out.println(work.Show()); 

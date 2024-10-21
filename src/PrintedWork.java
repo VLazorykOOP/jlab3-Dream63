@@ -1,6 +1,6 @@
 public class PrintedWork {
-    private String author;
-    private int numOfPages;
+    String author;
+    int numOfPages;
 
     public PrintedWork(String Author, int NumOfPages) {
         author = Author;
